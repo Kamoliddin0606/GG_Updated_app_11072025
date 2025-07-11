@@ -37,12 +37,23 @@ import com.kashtansystem.project.gloriyamarketing.core.SoapProject;
 import com.kashtansystem.project.gloriyamarketing.models.template.UserDetial;
 import com.kashtansystem.project.gloriyamarketing.net.soap.ReqLogin;
 import com.kashtansystem.project.gloriyamarketing.net.soap.ReqLoginMultiUser;
+import com.kashtansystem.project.gloriyamarketing.service.LocationForegroundService;
 import com.kashtansystem.project.gloriyamarketing.service.MainService;
 import com.kashtansystem.project.gloriyamarketing.utils.AppCache;
 import com.kashtansystem.project.gloriyamarketing.utils.C;
 import com.kashtansystem.project.gloriyamarketing.utils.L;
 import com.kashtansystem.project.gloriyamarketing.utils.UpdateChecker;
 import com.kashtansystem.project.gloriyamarketing.utils.UserType;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Build;
 
 import java.util.Date;
 
@@ -123,7 +134,48 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         // sp.edit().putInt(L.key_date_of_edit_binned,5).apply();
         // int date_of_edit_binned = sp.getInt(L.key_date_of_edit_binned,5);
         // L.date_of_edit_binned = date_of_edit_binned;
+        //start service recLocCurier
+        //11072025 +
+        //start service recLocCurier
 
+        // 1. Location permission tekshirish
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
+            Toast.makeText(this, "Lokatsiyadan foydalanish uchun ruxsat bering!", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        // 2. Background location permission (Android 10+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1001);
+                Toast.makeText(this, "Lokatsiyadan foydalanish uchun ruxsat bering!", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+
+        // 3. GPS yoqilganini tekshirish
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        boolean isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        if (!isGpsEnabled) {
+            // Foydalanuvchiga GPS’ni yoqishni so‘rab dialog ochish
+            new AlertDialog.Builder(this)
+                    .setMessage("GPS yoqilmagan. Iltimos, GPS’ni yoqing!")
+                    .setPositiveButton("Sozlamalar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("Bekor qilish", null)
+                    .show();
+            return;
+        }
+
+        // 4. Hammasi yaxshi bo‘lsa, servisni ishga tushirish
+        Intent serviceIntent = new Intent(this, LocationForegroundService.class);
+        ContextCompat.startForegroundService(this, serviceIntent);
+        //11072025 -
         Intent intent = getIntent();
         if (intent.getAction() == null) {
             etLogin.setText("");

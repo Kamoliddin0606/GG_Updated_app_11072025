@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "801159528319",
+    "firebase_url": "https://gloriamarket-70cdd.firebaseio.com",
+    "project_id": "gloriamarket-70cdd",
+    "storage_bucket": "gloriamarket-70cdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801159528319:android:d9094fac27790bd7",
+        "android_client_info": {
+          "package_name": "com.kashtansystem.project.gloriyamarketing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801159528319-eo9sdeql49f7boqagk5i2g1laps3p3uq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashtansystem.project.gloriyamarketing",
+            "certificate_hash": "eaa2c72242a256c8cbca3ebbbc1423b0d87b6453"
+          }
+        },
+        {
+          "client_id": "801159528319-0k3552lts2nraf3m83alsqqfi3o1eiii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kashtansystem.project.gloriyamarketing",
+            "certificate_hash": "0b75e37844e6d27a6655647182ad61a0dafa05c6"
+          }
+        },
+        {
+          "client_id": "801159528319-lelsm3bnh5987mijva2fca5murmj7rki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm7YMiQHHDPPIZ7vmKKQnejLKvDHtHLcU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801159528319-lelsm3bnh5987mijva2fca5murmj7rki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
