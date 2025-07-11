@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <CalendarView
+        android:id="@+id/dialogCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:selectedWeekBackgroundColor="@color/colorAccent"
+        android:weekNumberColor="@color/colorPrimaryDark"
+        android:weekSeparatorLineColor="@color/colorPrimary"/>
+    <Button
+        android:id="@+id/dialogBtnSelDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonBarButtonStyle"
+        android:text="@string/dialog_btn_ok"/>
+</LinearLayout>

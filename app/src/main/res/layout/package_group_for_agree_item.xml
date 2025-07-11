@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="40dp">
+    <!-- дата доставки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_delivery_date"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreeDeliveryDate"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Клиент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_customer"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreeCustomer"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Общий обьём -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_total_capacity"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreeTotalCapacity"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Общий вес -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_total_weight"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreeTotalWeight"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- ф.и.о. сборщика -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_packer"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreePacker"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- статус -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_status2"/>
+        <TextView
+            android:id="@+id/tvPkgFAgreeStatus"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnPkgFAgreeComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_just_agree"
+        android:layout_gravity="end"
+        android:focusable="false"
+        android:tag="0"/>
+</LinearLayout>

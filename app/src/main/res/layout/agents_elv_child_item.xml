@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dfdfdf">
+    <!-- all agent's tp -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:id="@+id/elvAgentsAllTp"
+            style="@style/elv_label"/>
+    </LinearLayout>
+    <!-- last known location -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_last_known_loc"/>
+        <TextView
+            android:id="@+id/tvElvAgentsLastAddress"
+            style="@style/elv_text"/>
+    </LinearLayout>
+    <!-- amount of taken orders -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_amt_taken_orders"/>
+        <TextView
+            android:id="@+id/tvElvAgentsAmTakenOrders"
+            style="@style/elv_text"/>
+    </LinearLayout>
+    <!-- amount of visited t.p. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_amt_visited_tp"/>
+        <TextView
+            android:id="@+id/tvElvAgentsVisTp"
+            style="@style/elv_text"/>
+    </LinearLayout>
+    <!-- comment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_comment"/>
+        <TextView
+            android:id="@+id/tvElvAgentComment"
+            style="@style/elv_text"/>
+    </LinearLayout>
+</LinearLayout>

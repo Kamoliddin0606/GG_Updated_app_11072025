@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBgSutItems"
+    android:padding="5dp">
+    <!-- Артикул -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_vendor_code"/>
+        <TextView
+            android:id="@+id/tvPkgVendorCode"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Наименование -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_name"/>
+        <TextView
+            android:id="@+id/tvPkgName"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Ед.измерения -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_measure"/>
+        <TextView
+            android:id="@+id/tvPckMeasure"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Количество -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_count"/>
+        <TextView
+            android:id="@+id/tvPkgCount"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Вес -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_weight"/>
+        <TextView
+            android:id="@+id/tvPkgWeight"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Объём -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_capacity"/>
+        <TextView
+            android:id="@+id/tvPkgCapacity"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+</LinearLayout>

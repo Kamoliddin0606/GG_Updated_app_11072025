@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mSyncAll"
+        app:showAsAction="never"
+        android:title="@string/menu_sync_all"/>
+    <item
+        android:id="@+id/mSyncRegions"
+        app:showAsAction="never"
+        android:title="@string/menu_sync_regions"/>
+    <item
+        android:id="@+id/mSyncClients"
+        app:showAsAction="never"
+        android:title="@string/menu_sync_clients"/>
+    <item
+        android:id="@+id/mSyncPriceType"
+        app:showAsAction="never"
+        android:title="@string/menu_sync_price_type"/>
+</menu>

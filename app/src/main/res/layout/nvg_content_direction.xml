@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/navigation"
+    android:id="@+id/mapContentDirections"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:visibility="invisible"
+    android:background="@drawable/map_bottom_panel">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@mipmap/ic_driving"
+        android:contentDescription="@null"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_main_direction"/>
+        <TextView
+            android:id="@+id/mapMainDirection"
+            style="@style/elv_text"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"/>
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorFaBg"
+            android:text="@string/label_alternative_direction"/>
+        <TextView
+            android:id="@+id/mapAlternativeDirection"
+            style="@style/elv_text"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"/>
+    </LinearLayout>
+</LinearLayout>

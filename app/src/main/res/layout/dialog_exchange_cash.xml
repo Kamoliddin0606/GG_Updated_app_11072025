@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="180dp"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+    <include layout="@layout/dialog_transfer_info"/>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/convType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="0">
+    </android.support.v7.widget.AppCompatSpinner>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <EditText
+            android:id="@+id/etExcBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_input_rate"
+            android:inputType="numberDecimal"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <EditText
+            android:id="@+id/etExcTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_input_sum"
+            android:inputType="numberDecimal"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:id="@+id/tvExcTotalSum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText1"
+        android:textSize="20sp"
+        android:layout_margin="5dp"/>
+    <include layout="@layout/dialog_btns"/>
+</LinearLayout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kashtansystem.project.gloriyamarketing">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:name=".activity.main.ProjectApp">
+
+        <!--<meta-data-->
+        <!--android:name="firebase_crashlytics_collection_enabled"-->
+        <!--android:value="false" />-->
+
+        <!-- LoginActivity -->
+        <activity
+            android:name=".activity.main.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Общая форма агента/супервайзера/руководителя -->
+        <activity
+            android:name=".activity.main.AgentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Настройки -->
+        <activity
+            android:name=".activity.main.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <!-- Агент. Список т.т. -->
+        <activity
+            android:name=".activity.agent.TradingPointsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <!-- Агент. Создание заказа -->
+        <activity
+            android:name=".activity.agent.MakeOrderNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <!-- Агент. Товары -->
+        <activity
+            android:name=".activity.agent.ProductListNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Выбранные товары -->
+        <activity
+            android:name=".activity.agent.SelectedGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Фотоотчёт -->
+        <activity
+            android:name=".activity.agent.PictureCaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Указание т.т. на карте при создании -->
+        <activity
+            android:name=".activity.agent.NavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Создание новой торговой точки -->
+        <activity
+            android:name=".activity.agent.NewTradingPointActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. Созданные заказы -->
+        <activity
+            android:name=".activity.agent.CreatedOrdersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Агент. История заказов -->
+        <activity
+            android:name=".activity.agent.OrdersHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Экспедитор -->
+        <activity
+            android:name=".activity.forwarder.DeliveryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Кассир -->
+        <activity
+            android:name=".activity.collector.DebtorListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Кассир. Сбор денежных средств у кредиторов -->
+        <activity
+            android:name=".activity.collector.TakeCashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <!-- Кассир. Сбор денежных средств у экспедиторов -->
+        <activity
+            android:name=".activity.collector.TakeCashFromForwardersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activity.collector.TakeCashFromForwarderNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Кассир. Повылки -->
+        <activity
+            android:name=".activity.collector.ParcelsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.collector.HistoryExpensesCollectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Экспедитор. Список доставок -->
+        <activity
+            android:name=".activity.forwarder.DeliveryGoodsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Указание количества возвращаемого товара -->
+        <activity
+            android:name=".activity.forwarder.SelectGoodsToReturn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Направления по карте -->
+        <activity
+            android:name=".activity.forwarder.DirectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Супервайзер. Агенты -->
+        <activity
+            android:name=".activity.supervisor.AgentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Супервайзер -->
+        <activity
+            android:name=".activity.boss.SupervisorsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Сборщик -->
+        <activity
+            android:name=".activity.packer.PackagesListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Заведующий склада -->
+        <activity
+            android:name=".activity.warehousemanager.WarehouseManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Сборки на подтверждение -->
+        <activity
+            android:name=".activity.warehousemanager.PackagesListForAgreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Отменённые заказы для возврата -->
+        <activity
+            android:name=".activity.warehousemanager.CanceledOrdersForReceivingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- Руководитель - подтверждение РКО -->
+        <activity
+            android:name=".activity.boss.ExpenseListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.boss.ExpensesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.boss.HistoryExpensesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Прочие приходы-->
+        <activity android:name=".activity.collector.OtherIncomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Vibor sklada-->
+        <activity android:name=".activity.agent.PickWarehouseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activity.agent.ContractsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activity.agent.AddContractActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activity.agent.TradingPointsByInnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activity.agent.OldContractsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--App Update-->
+        <activity android:name=".activity.main.UpdateAppActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <service
+            android:name=".service.MainService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service
+            android:name=".service.ReloadProductIntentService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <receiver
+            android:enabled="true"
+            android:exported="true"
+            android:name=".receiver.AppRebootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- google navigation api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fire_provider" />
+        </provider>
+
+
+    </application>
+</manifest>

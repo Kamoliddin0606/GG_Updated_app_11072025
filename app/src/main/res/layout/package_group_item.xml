@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="40dp">
+    <!-- дата доставки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_delivery_date"/>
+        <TextView
+            android:id="@+id/tvPkgDeliveryDate"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Клиент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_customer"/>
+        <TextView
+            android:id="@+id/tvPkgCustomer"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Общий обьём -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_total_capacity"/>
+        <TextView
+            android:id="@+id/tvPkgTotalCapacity"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Общий вес -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_total_weight"/>
+        <TextView
+            android:id="@+id/tvPkgTotalWeight"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnPkgComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_complete_the_assembly"
+        android:layout_gravity="end"
+        android:focusable="false"
+        android:tag="0"/>
+</LinearLayout>

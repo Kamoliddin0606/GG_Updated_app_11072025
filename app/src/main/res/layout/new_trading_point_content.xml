@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:id="@+id/ntpContentItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp">
+        <!-- business region -->
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/businessReg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"/>
+        <!-- legal trading point name -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpLegalName"
+                style="@style/common_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:hint="@string/hint_tp_legal_name"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- trading point INN -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpInn"
+                style="@style/common_edit_text"
+                android:hint="@string/hint_tp_inn"
+                android:imeOptions="actionNext"
+                android:inputType="number"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- trading signboard -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpSignboard"
+                style="@style/common_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:hint="@string/hint_tp_signboard"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpMFO"
+                style="@style/common_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="5"
+                android:hint="МФО"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvMfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_tp_type"
+            android:textStyle="italic"
+            android:gravity="right"
+            android:visibility="gone"
+            android:textSize="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpRS"
+                style="@style/common_edit_text"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:hint="Расчётный счёт"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- trading point type -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_tp_type"
+            android:layout_marginTop="8dp"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/ntpType"
+                style="@style/common_edit_text"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- contact person -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpContact"
+                style="@style/common_edit_text"
+                android:inputType="textCapCharacters"
+                android:hint="@string/hint_tp_cp"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpFio"
+                style="@style/common_edit_text"
+                android:inputType="textCapCharacters"
+                android:hint="@string/fio_hint"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- contact person phone number -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpContactPhone"
+                style="@style/common_edit_text"
+                android:inputType="phone"
+                android:hint="@string/hint_tp_cp_phone"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- trading point legal address -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpLegalAddress"
+                style="@style/common_edit_text"
+                android:inputType="textCapCharacters"
+                android:hint="@string/hint_tp_legal_address"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- address -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/ntpAddress"
+                    style="@style/common_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:paddingRight="40dp"
+                    android:hint="@string/hint_tp_address"/>
+            </android.support.design.widget.TextInputLayout>
+            <ImageView
+                android:id="@+id/ntpCurLoc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_gravity="center_vertical|end"
+                android:contentDescription="@null"
+                android:src="@android:drawable/ic_menu_mylocation"/>
+        </FrameLayout>
+        <!-- trading point reference point -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpReferencePoint"
+                style="@style/common_edit_text"
+                android:hint="@string/hint_tp_reference_point"
+                android:inputType="textCapCharacters"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+        <!-- phone number of responsible person -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ntpResp"
+                style="@style/common_edit_text"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:hint="@string/hint_tp_responsible"/>
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/ntpSave"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:text="@string/btn_save"/>
+    </LinearLayout>
+</ScrollView>

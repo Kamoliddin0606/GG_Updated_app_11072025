@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvTabTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minWidth="150dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:paddingRight="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:textColor="@color/tab_text"
+        android:background="@drawable/tab_bg"/>
+    <ImageButton
+        android:id="@+id/ibTabDel"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignRight="@id/tvTabTitle"
+        android:layout_alignEnd="@id/tvTabTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:drawable/ic_delete"
+        android:contentDescription="@null"/>
+</RelativeLayout>
+

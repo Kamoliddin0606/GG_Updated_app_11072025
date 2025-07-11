@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/order_content">
+    <TextView
+        style="@style/order_label"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_price_type"/>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/orderPriceType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>

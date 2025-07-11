@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/order_content">
+    <TextView
+        style="@style/order_label"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_comment"/>
+    <RadioGroup
+        android:id="@+id/orderRGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp">
+        <RadioButton
+            android:id="@+id/orderRbSupervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/app_title_supervisor"
+            android:checked="true"
+            android:tag="@string/p_supervisor"/>
+        <RadioButton
+            android:id="@+id/orderRbForwarder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@string/app_title_forwarder"
+            android:tag="@string/p_forwarder"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/orderComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:hint="@string/hint_comment"/>
+</LinearLayout>

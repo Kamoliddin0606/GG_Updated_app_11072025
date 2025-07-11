@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="180dp"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+    <include layout="@layout/dialog_transfer_info"/>
+    <CheckBox
+        android:id="@+id/nPclSaveLocale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_save_local2"/>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/nPclBr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <EditText
+        android:id="@+id/nPclComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/hint_comment"/>
+    <EditText
+        android:id="@+id/nPclRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_input_rate"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/nPclSumma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="@string/hint_input_sum"
+            android:inputType="numberDecimal">
+            <requestFocus/>
+        </EditText>
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/nPclCurrencyType"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+    <include layout="@layout/dialog_btns"/>
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBgSutItems"
+    android:padding="5dp">
+    <!-- INN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_inn"/>
+        <TextView
+            android:id="@+id/tvElvInn"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Adress -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_address"/>
+        <TextView
+            android:id="@+id/tvElvAddress"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"
+            android:tag="0"/>
+    </LinearLayout>
+    <!-- Reference point -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_reference_point"/>
+        <TextView
+            android:id="@+id/tvElvRefPoint"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- The contact person -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_contact_person"/>
+        <TextView
+            android:id="@+id/tvElvContPerson"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- The contact person -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_contact_person_phone"/>
+        <TextView
+            android:id="@+id/tvElvContPersonPhone"
+            style="@style/elv_text"
+            android:textColor="@color/elv_child_selector"
+            android:tag="0"/>
+    </LinearLayout>
+    <!-- Trading point type -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/elv_label"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/label_tp_type"/>
+        <TextView
+            android:id="@+id/tvElvTpType"
+            style="@style/elv_text"
+            android:textColor="@color/colorText1"/>
+    </LinearLayout>
+    <!-- Forwarder -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            style="@style/elv_label"
+            android:text="@string/label_forwarder"/>
+        <TextView
+            android:id="@+id/tvElvForwarder"
+            style="@style/elv_text"/>
+    </LinearLayout>
+    <!-- start work button -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnContact"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:text="@string/contract" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnRefusal"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:text="@string/btn_refusal" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnElvWork"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="0"
+            android:text="@string/btn_start_work" />
+    </LinearLayout>
+
+</LinearLayout>

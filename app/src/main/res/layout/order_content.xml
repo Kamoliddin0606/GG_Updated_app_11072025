@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:id="@+id/orderItemContant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <!-- Поле для отображения ошибки -->
+        <TextView
+            android:id="@+id/orderAttention"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/holo_red_dark"/>
+        <!-- save or save and send -->
+        <CheckBox
+            android:id="@+id/orderSaveLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/hint_save_local"/>
+        <!-- В кредит -->
+        <CheckBox
+            android:id="@+id/orderCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_on_credit"
+            android:enabled="false"/>
+        <include layout="@layout/order_item_credit_info"/>
+        <!-- Тип заказа -->
+        <include layout="@layout/order_item_type"/>
+        <!-- Тип цены -->
+        <include layout="@layout/order_item_price_type"/>
+        <!-- Товары заказа -->
+        <include layout="@layout/order_item_goods"/>
+        <!-- -->
+        <TextView
+            android:id="@+id/tvCreditInfo"
+            style="@style/order_label"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_credit_info"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/orderCreditsInfo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone">
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAddNewVisitDay"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:text="@string/btn_add_new_visit"/>
+        <!-- Дата доставки -->
+        <include layout="@layout/order_item_delivery_date"/>
+        <!-- Дополнительная информация -->
+        <TextView
+            style="@style/order_label"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_additional_info"/>
+        <TextView style="@style/separator"/>
+        <!-- Комментарий -->
+        <include layout="@layout/order_item_comment"/>
+        <!-- Информация по конкурентам -->
+        <TextView
+            style="@style/order_label"
+            android:layout_marginTop="10dp"
+            android:text="@string/label_scouting"/>
+        <LinearLayout
+            android:id="@+id/orderCompetitorItems"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp">
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAddNewCompItem"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="75dp"
+            android:textAllCaps="false"
+            android:text="@string/btn_add_new_comp"/>
+    </LinearLayout>
+</ScrollView>

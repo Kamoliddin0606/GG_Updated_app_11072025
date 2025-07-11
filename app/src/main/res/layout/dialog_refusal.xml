@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+
+    <include layout="@layout/dialog_transfer_info"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/sRefusal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <include layout="@layout/dialog_btns"/>
+</LinearLayout>

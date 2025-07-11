@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="180dp"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+
+    <include layout="@layout/dialog_transfer_info"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/sTransferCashier"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/etTransferCash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:hint="@string/hint_input_sum"
+            android:inputType="numberDecimal">
+            <requestFocus/>
+        </EditText>
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/sTransferCashType"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="@string/hint_comment"/>
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/sBoss"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <include layout="@layout/dialog_btns"/>
+</LinearLayout>

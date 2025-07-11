@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/navigation"
+    android:id="@+id/mapContentAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <TextView
+        style="@style/elv_label"
+        android:textColor="@android:color/white"
+        android:text="@string/label_address"/>
+    <TextView
+        android:id="@+id/mapTvAddress"
+        style="@style/elv_text"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/white"
+        android:tag=""/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_refresh"/>
+        <Button
+            android:id="@+id/btnAcceptAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_btn_ok"/>
+    </LinearLayout>
+</LinearLayout>

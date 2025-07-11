@@ -1,0 +1,8 @@
+commit 20-v1.3
+1) GloriyaMarketing_upgrade_5-6.sql
+2) TradingPointsActivity.java
+3) ReqEditOrder
+4) ReqOrderForEdit
+5) ReqSendOrder
+6) AppDb
+7) MadeOrderTemplate

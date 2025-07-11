@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/order"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp">
+    <TextView
+        style="@style/order_label"
+        android:text="@string/label_photo_rep"/>
+    <TextView
+        style="@style/separator"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp">
+        <ImageView
+            android:id="@+id/orderPhoto1"
+            style="@style/img_photo_report"
+            android:tag=""/>
+        <ImageView
+            android:id="@+id/orderPhoto2"
+            style="@style/img_photo_report"
+            android:tag=""/>
+        <ImageView
+            android:id="@+id/orderPhoto3"
+            style="@style/img_photo_report"
+            android:tag=""/>
+    </LinearLayout>
+</LinearLayout>

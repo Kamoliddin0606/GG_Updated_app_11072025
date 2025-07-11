@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/item_selection"
+    android:minHeight="50dp"
+    android:padding="5dp">
+    <!-- Product name -->
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!-- Price -->
+            <TextView
+                android:id="@+id/textView"
+                style="@style/elv_label"
+                android:text="@string/label_quantity_of_goods"/>
+            <TextView
+                android:id="@+id/tvProductAmountInfo"
+                style="@style/elv_text"/>
+        </LinearLayout>
+        <!-- field for input amount of goods -->
+        <EditText
+            android:id="@+id/etProductAmount"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"/>
+    </LinearLayout>
+    <!-- information field -->
+    <TextView
+        android:id="@+id/tvProductNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"/>
+</LinearLayout>

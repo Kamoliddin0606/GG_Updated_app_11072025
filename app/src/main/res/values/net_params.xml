@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_to_google_api">https://maps.googleapis.com</string>
+
+    <string name="p_supervisor">supervisor</string>
+    <string name="p_forwarder">forwarder</string>
+</resources>

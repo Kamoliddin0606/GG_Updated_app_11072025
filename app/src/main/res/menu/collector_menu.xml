@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mTakeCashForForwarder"
+        android:title="@string/menu_take_cash_from_forwarder"/>
+    <item
+        android:id="@+id/mhistory"
+        android:title="@string/history"/>
+    <item
+        android:id="@+id/mParcel"
+        android:title="@string/menu_package"/>
+    <item
+        android:id="@+id/mOtherIncome"
+        android:title="@string/other_income"/>
+    <item
+        android:id="@+id/mTransferCash"
+        android:title="@string/menu_transfer_cash"/>
+    <item
+        android:id="@+id/mExchangeCash"
+        android:title="@string/menu_exchange_cash"/>
+    <item
+        android:id="@+id/mRefresh"
+        android:title="@string/menu_refresh"/>
+    <item
+        android:id="@+id/mRefreshDealers"
+        android:title="@string/menu_refresh_dealers"/>
+    <item
+        android:id="@+id/mLogout"
+        android:title="@string/menu_logout"/>
+</menu>
